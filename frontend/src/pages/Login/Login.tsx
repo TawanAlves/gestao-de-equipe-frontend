@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Screen from "../../components/Screen";
-import Logo from "../assets/Rectangle.png";
+import Screen from "../../components/Screen/BaseScreen";
+import Logo from "../../assets/Rectangle.png";
 import {TextInput,PasswordInput, SendButton, ContainerFlex} from "./LoginCss"
 
 export default class Login extends Component {

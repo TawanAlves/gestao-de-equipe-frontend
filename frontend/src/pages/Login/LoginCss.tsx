@@ -10,7 +10,6 @@ export const ContainerFlex = styled.div`
 `
 export const TextInput = styled.input.attrs({type:"text"})`
    color: black;
-   font-family: 'Roboto', sans-serif;
    font-size: 15px; 
    width: 300px; 
    border: 2px solid #00838F !important;
@@ -20,7 +19,6 @@ export const TextInput = styled.input.attrs({type:"text"})`
 `
 export const PasswordInput = styled.input.attrs({type:"password"})`
    color: black;
-   font-family: 'Roboto', sans-serif;
    font-size: 15px; 
    width: 300px; 
    border: 2px solid #00838F !important;
@@ -29,8 +27,7 @@ export const PasswordInput = styled.input.attrs({type:"password"})`
    padding: 11px;
 `
 export const SendButton = styled.input.attrs({type:"button"})`
-   color: black;
-   font-family: 'Roboto', sans-serif; 
+   color: black; 
    width: 300px; 
    border: 2px solid #00838F !important;
    background: #00838F; 
