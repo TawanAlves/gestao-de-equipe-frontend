@@ -44,7 +44,7 @@ export const ArrowLeftIcon = styled(FaArrowLeft)`
 export const ContentContainer = styled.div`
    display: flex;
    justify-self: end !important;
-   background-color: #0cff4d;
+   /* background-color: #0cff4d; */
    flex-grow: 2;
    /* height: 100vh; */
 `
