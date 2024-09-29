@@ -3,11 +3,12 @@ import { RetangleBoxContainer } from './RetangleBoxCss';
 
 interface RetangleBoxProps{
    children: React.ReactNode;
+   style?: React.CSSProperties;
 }
 
-const RetangleBox: React.FC<RetangleBoxProps> = ({children}) => {
+const RetangleBox: React.FC<RetangleBoxProps> = ({children, style}) => {
   return (
-   <RetangleBoxContainer>
+   <RetangleBoxContainer style={style}>
       {children}
    </RetangleBoxContainer>
   );
