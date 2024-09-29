@@ -35,7 +35,7 @@ export const PageHeader = styled.h1`
    font-size: 25px;
    font-weight: 500;
 `
-export const ArrowLeftIcon = styled(FaArrowLeft)`
+export const ArrowLeft = styled(FaArrowLeft)`
    align-self: flex-start;
    color: #000000 !important;
    font-size: 25px;
