@@ -2,9 +2,8 @@ import React from 'react';
 //Components
 import BaseScreen from '../../components/Screen/BaseScreen'
 import RetangleBox  from '../../components/RetangleBox/RetangleBox';
-import Circle  from '../../assets/circle_ios.png';
 
-import { TextInput, ContentContainer,ArrowRightIcon, LeftBoxContainer,MiddleBoxContainer,RigthBoxContainer,Name } from './MembrosCss';
+import { TextInput, ContentContainer,ArrowRightIcon,Name } from './MembrosCss';
 
 const items = [
   { name: "Henrique Andrade Serra", description: "Oficial - 24 anos" },
@@ -16,28 +15,27 @@ const items = [
 
 ];
 
-
 const Membros: React.FC = () => {
   return (
-    <BaseScreen header="Membros">
+    <BaseScreen header="Membros" showArrow ={true} arrowRoute= "/">
       <ContentContainer>
           <p style={{textAlign: "left", paddingBottom:"4px", paddingLeft: "6px"}}>Filtrar por regional</p>
           <TextInput placeholder="Todas" style={{marginBottom:"49px"}} />
         {items.map((item, index) => (
                 <RetangleBox
                   key={index}
-                  style={{ marginBottom: index !== items.length - 1 ? '15px' : '0' }}
+                  style={{borderRadius:"100px 10px 10px 100px", marginBottom: index !== items.length - 1 ? '15px' : '0' }}
                 >
-                  <LeftBoxContainer>  
+                  <div>  
                     <p>IOS</p>
-                  </LeftBoxContainer>
-                  <MiddleBoxContainer>
+                  </div>
+                  <div>
                     <Name>{item.name}</Name>
                     <p style={{ fontSize: "12px", textAlign: "left" }}>{item.description}</p>
-                  </MiddleBoxContainer>
-                  <RigthBoxContainer>
+                  </div>
+                  <div>
                     <ArrowRightIcon />
-                  </RigthBoxContainer>
+                  </div>
                 </RetangleBox>
               ))}
             
