@@ -6,6 +6,7 @@ import {ArrowRightIcon, HeaderTitle, DashboardContent } from '../Dashboard/Dashb
 import RetangleBox  from '../../components/RetangleBox/RetangleBox';
 import BaseScreen from '../../components/Screen/BaseScreen'
 import SquareBox from '../../components/SquareBox/SquareBox';
+import SquareNumberBox from '../../components/SquareNumberBox/SquareNumberBox'
 
 
 const Dashboard: React.FC = () => {
@@ -24,6 +25,14 @@ const Dashboard: React.FC = () => {
          <DashboardContent>                 
             <SquareBox title='Últimos 6 meses' aplicou={10} recebeu={10}/>
             <SquareBox title='Geral' aplicou={10} recebeu={10}/>
+         </DashboardContent>  
+         <DashboardContent>                 
+            <SquareNumberBox title='Total de Membros' result={10}/>
+            <SquareNumberBox title='Membros IOS' result={10}/>
+         </DashboardContent>   
+         <DashboardContent>                 
+            <SquareNumberBox title='Membros SSA' result={10}/>
+            <SquareNumberBox title='Membros VDC' result={10}/>
          </DashboardContent>     
       </div>
    </BaseScreen>
