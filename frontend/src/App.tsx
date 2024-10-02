@@ -3,6 +3,7 @@ import "./App.css";
 import Login from "./pages/Login/Login";
 import Membros from "./pages/Membros/Membros";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import User from "./pages/User/User"
 import BaseScreen from "../src/components/Screen/BaseScreen"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -17,7 +18,8 @@ function App() {
           <Route path="/" element={<Login />} />
           {/* <Route path="/base" element={<BaseScreen />} /> */}
           <Route path="/membros" element={<Membros />} />   
-          <Route path="/dashboard" element={<Dashboard />} />      
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/user" element={<User />} />      
       </Routes>   
     </BrowserRouter>
     </div>
