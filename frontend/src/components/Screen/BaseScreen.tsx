@@ -1,15 +1,25 @@
-import React, { Children } from 'react';
-import RegisterIcon from "../../assets/registerIcon.svg"
-import AdminIcon from "../../assets/adminIcon.svg"
-import DashboarIcon from "../../assets/dashboarIcon.svg"
-import { useNavigate } from 'react-router-dom';
+import React, { Children } from "react";
+import RegisterIcon from "../../assets/registerIcon.svg";
+import AdminIcon from "../../assets/adminIcon.svg";
+import DashboarIcon from "../../assets/dashboarIcon.svg";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import { ScreenContainer,ContainerFlex,NavContainer,ContentContainer,PageHeader, ArrowLeft, FooterContainer } from './BaseScreenCss';
+import {
+  ScreenContainer,
+  ContainerFlex,
+  NavContainer,
+  ContentContainer,
+  PageHeader,
+  ArrowLeft,
+  FooterContainer,
+} from "./BaseScreenCss";
+import Dashboard from "@/pages/Dashboard/Dashboard";
 
 interface BaseScreenProps {
   header: string;
   children: React.ReactNode;
-  showArrow?: boolean;  
+  showArrow?: boolean;
   arrowRoute?: string;
 }
 
@@ -21,35 +31,40 @@ interface ArrowLeftIconProps {
 const ArrowLeftIcon: React.FC<ArrowLeftIconProps> = ({ visible, route }) => {
   const navigate = useNavigate();
   if (!visible) {
-    return null; 
+    return null;
   }
 
   return (
-    <div onClick={() => route && navigate(route)} style={{ cursor: 'pointer' }}>
-    <ArrowLeft/>
+    <div onClick={() => route && navigate(route)} style={{ cursor: "pointer" }}>
+      <ArrowLeft />
     </div>
   );
 };
 
-const BaseScreen: React.FC <BaseScreenProps>= ({header, children,showArrow = false, arrowRoute}) => {
-  return(
+const BaseScreen: React.FC<BaseScreenProps> = ({
+  header,
+  children,
+  showArrow = false,
+  arrowRoute,
+}) => {
+  return (
     <ScreenContainer>
       <ContainerFlex>
         <NavContainer>
-          <ArrowLeftIcon visible={showArrow} route={arrowRoute}/>
+          <ArrowLeftIcon visible={showArrow} route={arrowRoute} />
           <PageHeader> {header} </PageHeader>
         </NavContainer>
-          <ContentContainer>
-            {children}  
-          </ContentContainer>       
+        <ContentContainer>{children}</ContentContainer>
       </ContainerFlex>
-      <FooterContainer> 
-      <img src={RegisterIcon} style={{width:"45px", height: "45px"}} />
-      <img src={DashboarIcon} style={{width:"60px", height: "38px"}} />
-      <img src={AdminIcon } style={{width:"42px", height: "42px"}} />
+      <FooterContainer>
+        <img src={RegisterIcon} style={{ width: "45px", height: "45px" }} />
+        <Link to="/dashboard">
+          <img src={DashboarIcon} style={{ width: "60px", height: "38px" }} />
+        </Link>
+        <img src={AdminIcon} style={{ width: "42px", height: "42px" }} />
       </FooterContainer>
     </ScreenContainer>
   );
-}
+};
 
 export default BaseScreen;
