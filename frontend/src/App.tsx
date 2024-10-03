@@ -5,6 +5,7 @@ import Membros from "@/pages/Membros/Membros";
 import Dashboard from "@/pages/Dashboard/Dashboard";
 import User from "@/pages/User/User";
 import Geral from "@/pages/Geral/Geral";
+import Historic from "@/pages/Historic/Historic";
 import BaseScreen from "@/components/Screen/BaseScreen";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/user" element={<User />} />
           <Route path="/geral" element={<Geral />} />
+          <Route path="/historic" element={<Historic />} />
         </Routes>
       </BrowserRouter>
     </div>
