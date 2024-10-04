@@ -12,25 +12,14 @@ import {
 //components
 import RetangleBox from "@/components/RetangleBox/RetangleBox";
 import BaseScreen from "@/components/Screen/BaseScreen";
-import SquareBox from "@/components/SquareBox/SquareBox";
 import DatePicker from "@/components/DatePicker/DateInput";
 
 const Dashboard: React.FC = () => {
   return (
-    <BaseScreen header="Geral" showArrow={true}>
+    <BaseScreen header="Histórico">
       <div style={{ paddingTop: "22px" }}>
-        <div style={{ minWidth: "340px" }}>
-          <DashboardContent>
-            <SquareBox title="Total Mês Atual" aplicou={10} recebeu={10} />
-            <SquareBox title="Total Mês Passado" aplicou={10} recebeu={10} />
-          </DashboardContent>
-          <DashboardContent>
-            <SquareBox title="Últimos 6 meses" aplicou={10} recebeu={10} />
-            <SquareBox title="Geral" aplicou={10} recebeu={10} />
-          </DashboardContent>
-          <Title>Histórico</Title>
-          <DatePicker title="Selecionar dia:" />
-          <div style={{ marginBottom: "29px" }} />
+        <DatePicker title="Selecionar dia:" />
+        <div style={{ minWidth: "340px", marginTop: "49px" }}>
           <RetangleBox style={{ margin: "0 0 20px 0" }}>
             <div></div>
             <div>
