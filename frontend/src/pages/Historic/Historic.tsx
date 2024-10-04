@@ -12,14 +12,14 @@ import {
 //components
 import RetangleBox from "@/components/RetangleBox/RetangleBox";
 import BaseScreen from "@/components/Screen/BaseScreen";
-import SquareBox from "@/components/SquareBox/SquareBox";
+import DatePicker from "@/components/DatePicker/DateInput";
 
 const Dashboard: React.FC = () => {
   return (
-    <BaseScreen header="Histórico" showArrow={true}>
+    <BaseScreen header="Histórico">
       <div style={{ paddingTop: "22px" }}>
-        <input aria-label="Date" type="date" />
-        <div style={{ minWidth: "340px" }}>
+        <DatePicker title="Selecionar dia:" />
+        <div style={{ minWidth: "340px", marginTop: "49px" }}>
           <RetangleBox style={{ margin: "0 0 20px 0" }}>
             <div></div>
             <div>

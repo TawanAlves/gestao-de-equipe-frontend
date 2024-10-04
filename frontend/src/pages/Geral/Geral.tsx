@@ -13,6 +13,7 @@ import {
 import RetangleBox from "@/components/RetangleBox/RetangleBox";
 import BaseScreen from "@/components/Screen/BaseScreen";
 import SquareBox from "@/components/SquareBox/SquareBox";
+import DatePicker from "@/components/DatePicker/DateInput";
 
 const Dashboard: React.FC = () => {
   return (
@@ -28,6 +29,8 @@ const Dashboard: React.FC = () => {
             <SquareBox title="Geral" aplicou={10} recebeu={10} />
           </DashboardContent>
           <Title>Histórico</Title>
+          <DatePicker title="Selecionar dia:" />
+          <div style={{ marginBottom: "29px" }} />
           <RetangleBox style={{ margin: "0 0 20px 0" }}>
             <div></div>
             <div>
