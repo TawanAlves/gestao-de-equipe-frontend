@@ -83,6 +83,28 @@ const Dashboard: React.FC = () => {
               <Number>10</Number>
             </div>
           </RetangleBox>
+          <RetangleBox style={{ margin: "0 0 20px 0" }}>
+            <div></div>
+            <div>
+              <div style={{ display: "flex" }}>
+                <Exclamation />
+                <HistoricParagraf>Recebeu a Luz</HistoricParagraf>
+              </div>
+              <div style={{ display: "flex" }}>
+                <Exclamation />
+                <HistoricParagraf>Leu Ensinamento</HistoricParagraf>
+              </div>
+              <div style={{ display: "flex" }}>
+                <Exclamation />
+                <HistoricParagraf>
+                  Foi ao local de aprimoramento
+                </HistoricParagraf>
+              </div>
+            </div>
+            <div style={{ marginRight: "5px" }}>
+              <Number>12</Number>
+            </div>
+          </RetangleBox>
         </div>
       </div>
     </BaseScreen>

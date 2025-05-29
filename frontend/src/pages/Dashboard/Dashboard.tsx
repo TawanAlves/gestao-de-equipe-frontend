@@ -15,8 +15,15 @@ import SquareNumberBox from "../../components/SquareNumberBox/SquareNumberBox";
 const Dashboard: React.FC = () => {
   return (
     <BaseScreen header="Dashboard">
-      <div style={{ minWidth: "340px" }}>
-        <RetangleBox style={{ margin: "40px 0" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+          height: "100%",
+        }}
+      >
+        <RetangleBox style={{ margin: "0px 0" }}>
           <div></div>
           <div>
             <HeaderTitle> Visualização por Membros</HeaderTitle>{" "}

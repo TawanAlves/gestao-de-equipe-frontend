@@ -18,7 +18,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          {/* <Route path="/base" element={<BaseScreen />} /> */}
+          <Route
+            path="/base"
+            element={
+              <BaseScreen header="Base">
+                <div> Base Test</div>
+              </BaseScreen>
+            }
+          />
           <Route path="/membros" element={<Membros />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/user" element={<User />} />

@@ -1,10 +1,13 @@
 import React, { Children } from "react";
-import RegisterIcon from "../../assets/registerIcon.svg";
-import AdminIcon from "../../assets/adminIcon.svg";
-import DashboarIcon from "../../assets/dashboarIcon.svg";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+//components
+import RegisterIcon from "../../assets/registerIcon.svg";
+import AdminIcon from "../../assets/adminIcon.svg";
+import DashboarIcon from "../../assets/dashboarIcon.svg";
+
+//css
 import {
   ScreenContainer,
   ContainerFlex,
@@ -14,28 +17,28 @@ import {
   ArrowLeft,
   FooterContainer,
 } from "./BaseScreenCss";
-import Dashboard from "@/pages/Dashboard/Dashboard";
 
 interface BaseScreenProps {
   header: string;
   children: React.ReactNode;
   showArrow?: boolean;
   arrowRoute?: string;
+  route?: string;
 }
 
 interface ArrowLeftIconProps {
   visible: boolean;
   route?: string;
+  onClick?: () => void;
 }
 
-const ArrowLeftIcon: React.FC<ArrowLeftIconProps> = ({ visible, route }) => {
-  const navigate = useNavigate();
+const ArrowLeftIcon: React.FC<ArrowLeftIconProps> = ({ visible, onClick }) => {
   if (!visible) {
     return null;
   }
 
   return (
-    <div onClick={() => route && navigate(route)} style={{ cursor: "pointer" }}>
+    <div onClick={onClick} style={{ cursor: "pointer" }}>
       <ArrowLeft />
     </div>
   );
@@ -46,22 +49,38 @@ const BaseScreen: React.FC<BaseScreenProps> = ({
   children,
   showArrow = false,
   arrowRoute,
+  route,
 }) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    if (route) {
+      navigate(route);
+    }
+  };
   return (
     <ScreenContainer>
       <ContainerFlex>
         <NavContainer>
-          <ArrowLeftIcon visible={showArrow} route={arrowRoute} />
+          <ArrowLeftIcon visible={showArrow} onClick={handleNavigation} />
           <PageHeader> {header} </PageHeader>
         </NavContainer>
         <ContentContainer>{children}</ContentContainer>
       </ContainerFlex>
       <FooterContainer>
-        <img src={RegisterIcon} style={{ width: "45px", height: "45px" }} />
+        <Link to="/dailyregister">
+          <img
+            src={RegisterIcon}
+            alt="Registrar"
+            style={{ width: "45px", height: "45px" }}
+          />
+        </Link>
         <Link to="/dashboard">
           <img src={DashboarIcon} style={{ width: "60px", height: "38px" }} />
         </Link>
-        <img src={AdminIcon} style={{ width: "42px", height: "42px" }} />
+        <Link to="/membros">
+          <img src={AdminIcon} style={{ width: "42px", height: "42px" }} />
+        </Link>
       </FooterContainer>
     </ScreenContainer>
   );

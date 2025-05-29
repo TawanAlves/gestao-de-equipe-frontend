@@ -17,7 +17,7 @@ import SquareBox from "@/components/SquareBox/SquareBox";
 
 const Dashboard: React.FC = () => {
   return (
-    <BaseScreen header="Henrique Serra" showArrow={true}>
+    <BaseScreen header="Henrique Serra" showArrow={true} route="/membros">
       <div>
         <UserInfosTitle>Oficial - 24 anos</UserInfosTitle>
         <div style={{ minWidth: "340px" }}>
