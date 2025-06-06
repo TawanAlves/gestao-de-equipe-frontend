@@ -68,7 +68,7 @@ const BaseScreen: React.FC<BaseScreenProps> = ({
         <ContentContainer>{children}</ContentContainer>
       </ContainerFlex>
       <FooterContainer>
-        <Link to="/dailyregister">
+        <Link to="/">
           <img
             src={RegisterIcon}
             alt="Registrar"
