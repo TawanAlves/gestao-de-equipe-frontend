@@ -4,6 +4,12 @@
   color: #00838f;
   /* height: 100vh; */
 }
+a {
+  text-decoration: none;
+}
+
+/* Se realmente precisar de !important (raro em links básicos) */
+
 /* 
 .App-logo {
   height: 40vmin;

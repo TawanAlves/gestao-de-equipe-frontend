@@ -1,4 +1,4 @@
-export function formateDateBR(dataISO: string): string {
+export function formatDateBR(dataISO: string): string {
   const data = new Date(dataISO);
   return data.toLocaleDateString("pt-BR", {
     day: "2-digit",
@@ -26,5 +26,5 @@ export function calculateAge(birthDateISO: string): number {
 
   return age;
 }
-// import { formateDateBR } from "@/helpers/formateDateBR";
-// <p>Data: {formateDateBR(user.createdAt)}</p>
+// import { formatDateBR } from "@/helpers/formatDateBR";
+// <p>Data: {formatDateBR(user.createdAt)}</p>
