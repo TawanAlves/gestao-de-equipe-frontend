@@ -4,7 +4,9 @@ export const DateContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 21px;
-  padding-top: 55px;
+  height: 100%;
+  justify-content: center;
+  /* padding-top: 55px; */
 `;
 
 export const InputsContainer = styled.div`
@@ -16,8 +18,8 @@ export const NumberInput = styled.input.attrs({ type: "number" })`
   color: #000;
   border: 2px solid #00838f;
   border-radius: 10px;
-  width: 300px;
-  height: 40px;
+  width: 100%;
+  height: 50px;
   padding: 10px;
 `;
 
